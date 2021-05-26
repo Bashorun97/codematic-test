@@ -51,7 +51,7 @@ class CAT implements ITimeZoneStrategy {
 
 class EAT implements ITimeZoneStrategy {
   public calculateTime(): string {
-    const watTime = gmtTimeInMilliseconds.gmtTimeInMilliseconds(offsets.offsets.EAT);
+    const watTime = gmtTimeInMilliseconds.gmtTimeInMilliseconds(offsets.offsets.WAT);
     return watTime;
   } 
 }
