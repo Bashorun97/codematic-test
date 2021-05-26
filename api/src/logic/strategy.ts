@@ -17,7 +17,7 @@ class TimeZones {
   }
 
   public getTime() {
-    return this.timeZone.calculateTime()
+    return this.timeZone.calculateTime();
   }
 }
 
@@ -31,7 +31,7 @@ class CVT implements ITimeZoneStrategy {
 class GMT implements ITimeZoneStrategy {
   public calculateTime(): string {
     const gmtTime = gmtTimeInMilliseconds.gmtTimeInMilliseconds(offsets.offsets.GMT);
-    return gmtTime
+    return gmtTime;
   } 
 }
 

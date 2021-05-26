@@ -11,4 +11,4 @@ export default {
     EAT: 3,
     MT: 4    
   }
-}
+};
