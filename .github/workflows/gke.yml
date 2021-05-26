@@ -1,9 +1,6 @@
 name: gke
 
-on:
-  push:
-    branches:
-    - master
+on: 
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
