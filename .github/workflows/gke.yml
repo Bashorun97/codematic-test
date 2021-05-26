@@ -4,10 +4,10 @@ on: push
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GKE_CLUSTER: cluster-1    # TODO: update to cluster name
-  GKE_ZONE: us-central1-c   # TODO: update to cluster zone
-  DEPLOYMENT_NAME: gke-test # TODO: update to deployment name
-  IMAGE: static-site
+  GKE_CLUSTER: codematictest
+  GKE_ZONE: us-east1-b
+  DEPLOYMENT_NAME: codematic-test
+  IMAGE: codematic-test
 
 jobs:
   api:
@@ -26,7 +26,7 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
-      - name: Test
+      - name: Test  
         run: npm test
 
       # Setup gcloud CLI
