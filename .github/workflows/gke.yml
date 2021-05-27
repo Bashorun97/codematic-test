@@ -60,6 +60,6 @@ jobs:
 
         # Deploy to GKE
       - name: kubectl - Google Cloud GKE cluster.
-        run: deployment/k8s/apply.sh
+        run: ./k8s/apply.sh
       - name: Rollout
         run: kubectl rollout restart deployment api
