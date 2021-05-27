@@ -61,4 +61,6 @@ jobs:
         # Deploy to GKE
       - name: kubectl - Google Cloud GKE cluster.
         run: |-
-          kubectl apply -f deployments/
+          ./apply.sh
+      - name: Rollout
+        run: kubectl rollout restart deployment api
