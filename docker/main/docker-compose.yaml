@@ -3,7 +3,7 @@ services:
   api:
     build:
       context: ../../api
-    image: takehome/api
+    image: babaibeji/takehomeapi
     restart: on-failure
     ports:
       - '8084:8080'

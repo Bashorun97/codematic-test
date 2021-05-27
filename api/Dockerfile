@@ -1,5 +1,5 @@
 # Use Node base image
-FROM takehome/node:latest
+FROM babaibeji/takehomenode:latest
 
 # Create app directory in Docker
 WORKDIR /usr/src/app
