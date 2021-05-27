@@ -60,11 +60,5 @@ jobs:
 
         # Deploy to GKE
       - name: kubectl - Google Cloud GKE cluster.
-        uses: ameydev/gke-kubectl-action@master
-        env:
-          PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-          APPLICATION_CREDENTIALS: ${{ secrets.GKE_SA_KEY }}
-          CLUSTER_NAME: $GKE_CLUSTER
-          ZONE_NAME: $GKE_ZONE
-        with:
-          args: apply -f k8s/ -n prod
+        run: |-
+          kubectl apply -f deployments/
